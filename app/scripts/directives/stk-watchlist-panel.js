@@ -9,6 +9,10 @@
 angular.module('stockDogApp')
   // [1] Register directive and inject dependencies #注入指令与依赖
   .directive('stkWatchlistPanel', function ($location, $modal, WatchlistService) {
+    $scope.currentList = $routeParams.listId;
+    $scope.gotoList = function (listId) {
+      $location.path('watchlist/' + listId);
+    };
     return {
       templateUrl: 'views/templates/watchlist-panel.html',
       restrict: 'E',

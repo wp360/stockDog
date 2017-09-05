@@ -50,3 +50,6 @@ files: [
 修改：
 '<%= yeoman.app %>/**/*.html',
 ```
+## 添加新的路由
+`yo angular:route dashboard`
+`yo angular:route watchlist ––uri=watchlist/:listId`
